@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_ip_recp = new System.Windows.Forms.TextBox();
-            this.textBox_port_recp = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_connexion = new System.Windows.Forms.Button();
-            this.button_fermer = new System.Windows.Forms.Button();
-            this.button_envoyer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_ip_dest = new System.Windows.Forms.TextBox();
-            this.textBox_port_dest = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_recevoir = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button_cls = new System.Windows.Forms.Button();
-            this.textBox_recp = new System.Windows.Forms.TextBox();
-            this.textBox_send = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,19 +56,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Recp.";
             // 
-            // textBox_ip_recp
+            // textBox1
             // 
-            this.textBox_ip_recp.Location = new System.Drawing.Point(54, 25);
-            this.textBox_ip_recp.Name = "textBox_ip_recp";
-            this.textBox_ip_recp.Size = new System.Drawing.Size(69, 20);
-            this.textBox_ip_recp.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(54, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(69, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // textBox_port_recp
+            // textBox2
             // 
-            this.textBox_port_recp.Location = new System.Drawing.Point(140, 25);
-            this.textBox_port_recp.Name = "textBox_port_recp";
-            this.textBox_port_recp.Size = new System.Drawing.Size(60, 20);
-            this.textBox_port_recp.TabIndex = 2;
+            this.textBox2.Location = new System.Drawing.Point(140, 25);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(60, 20);
+            this.textBox2.TabIndex = 2;
             // 
             // label2
             // 
@@ -79,35 +79,32 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "IpeR";
             // 
-            // button_connexion
+            // button1
             // 
-            this.button_connexion.Location = new System.Drawing.Point(329, 23);
-            this.button_connexion.Name = "button_connexion";
-            this.button_connexion.Size = new System.Drawing.Size(166, 23);
-            this.button_connexion.TabIndex = 4;
-            this.button_connexion.Text = "Créer Socket et Bind(IPeR)";
-            this.button_connexion.UseVisualStyleBackColor = true;
-            this.button_connexion.Click += new System.EventHandler(this.button_connexion_Click);
+            this.button1.Location = new System.Drawing.Point(329, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Créer Socket et Bind(IPeR)";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // button_fermer
+            // button2
             // 
-            this.button_fermer.Location = new System.Drawing.Point(329, 70);
-            this.button_fermer.Name = "button_fermer";
-            this.button_fermer.Size = new System.Drawing.Size(165, 23);
-            this.button_fermer.TabIndex = 5;
-            this.button_fermer.Text = "Fermer Close()";
-            this.button_fermer.UseVisualStyleBackColor = true;
-            this.button_fermer.Click += new System.EventHandler(this.button_fermer_Click);
+            this.button2.Location = new System.Drawing.Point(329, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Fermer Close()";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // button_envoyer
+            // button3
             // 
-            this.button_envoyer.Location = new System.Drawing.Point(329, 119);
-            this.button_envoyer.Name = "button_envoyer";
-            this.button_envoyer.Size = new System.Drawing.Size(165, 23);
-            this.button_envoyer.TabIndex = 6;
-            this.button_envoyer.Text = "Envoyer SendTo(IPeD)";
-            this.button_envoyer.UseVisualStyleBackColor = true;
-            this.button_envoyer.Click += new System.EventHandler(this.button_envoyer_Click);
+            this.button3.Location = new System.Drawing.Point(329, 119);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Envoyer SendTo(IPeD)";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -118,19 +115,19 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Dest.";
             // 
-            // textBox_ip_dest
+            // textBox3
             // 
-            this.textBox_ip_dest.Location = new System.Drawing.Point(53, 57);
-            this.textBox_ip_dest.Name = "textBox_ip_dest";
-            this.textBox_ip_dest.Size = new System.Drawing.Size(70, 20);
-            this.textBox_ip_dest.TabIndex = 8;
+            this.textBox3.Location = new System.Drawing.Point(53, 57);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(70, 20);
+            this.textBox3.TabIndex = 8;
             // 
-            // textBox_port_dest
+            // textBox4
             // 
-            this.textBox_port_dest.Location = new System.Drawing.Point(140, 57);
-            this.textBox_port_dest.Name = "textBox_port_dest";
-            this.textBox_port_dest.Size = new System.Drawing.Size(60, 20);
-            this.textBox_port_dest.TabIndex = 9;
+            this.textBox4.Location = new System.Drawing.Point(140, 57);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(60, 20);
+            this.textBox4.TabIndex = 9;
             // 
             // label4
             // 
@@ -141,14 +138,14 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "IPeD";
             // 
-            // button_recevoir
+            // button4
             // 
-            this.button_recevoir.Location = new System.Drawing.Point(329, 170);
-            this.button_recevoir.Name = "button_recevoir";
-            this.button_recevoir.Size = new System.Drawing.Size(165, 35);
-            this.button_recevoir.TabIndex = 11;
-            this.button_recevoir.Text = "Recevoir ReceiveFrom() Bloquant Timeout";
-            this.button_recevoir.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(329, 170);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 35);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Recevoir ReceiveFrom() Bloquant Timeout";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -159,6 +156,14 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Envoi";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(53, 121);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(176, 68);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -168,54 +173,45 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Recp.";
             // 
-            // button_cls
+            // button5
             // 
-            this.button_cls.Location = new System.Drawing.Point(267, 333);
-            this.button_cls.Name = "button_cls";
-            this.button_cls.Size = new System.Drawing.Size(46, 23);
-            this.button_cls.TabIndex = 16;
-            this.button_cls.Text = "CLS";
-            this.button_cls.UseVisualStyleBackColor = true;
-            this.button_cls.Click += new System.EventHandler(this.button_cls_Click);
+            this.button5.Location = new System.Drawing.Point(267, 333);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(46, 23);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "CLS";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // textBox_recp
+            // textBox5
             // 
-            this.textBox_recp.Location = new System.Drawing.Point(53, 244);
-            this.textBox_recp.Multiline = true;
-            this.textBox_recp.Name = "textBox_recp";
-            this.textBox_recp.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_recp.Size = new System.Drawing.Size(198, 112);
-            this.textBox_recp.TabIndex = 17;
-            // 
-            // textBox_send
-            // 
-            this.textBox_send.Location = new System.Drawing.Point(56, 128);
-            this.textBox_send.Multiline = true;
-            this.textBox_send.Name = "textBox_send";
-            this.textBox_send.Size = new System.Drawing.Size(130, 61);
-            this.textBox_send.TabIndex = 18;
+            this.textBox5.Location = new System.Drawing.Point(53, 244);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox5.Size = new System.Drawing.Size(198, 112);
+            this.textBox5.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 381);
-            this.Controls.Add(this.textBox_send);
-            this.Controls.Add(this.textBox_recp);
-            this.Controls.Add(this.button_cls);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button_recevoir);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_port_dest);
-            this.Controls.Add(this.textBox_ip_dest);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button_envoyer);
-            this.Controls.Add(this.button_fermer);
-            this.Controls.Add(this.button_connexion);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_port_recp);
-            this.Controls.Add(this.textBox_ip_recp);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Communication par socket UDP";
@@ -227,22 +223,22 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_ip_recp;
-        private System.Windows.Forms.TextBox textBox_port_recp;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_connexion;
-        private System.Windows.Forms.Button button_fermer;
-        private System.Windows.Forms.Button button_envoyer;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_ip_dest;
-        private System.Windows.Forms.TextBox textBox_port_dest;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button_recevoir;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button_cls;
-        private System.Windows.Forms.TextBox textBox_recp;
-        private System.Windows.Forms.TextBox textBox_send;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
 
