@@ -20,10 +20,7 @@ namespace socketUDP
         }
 
         private Socket SSockUDP;
-        private void button_cls_Click(object sender, EventArgs e)
-        {
-            this.textBox_recp.Clear();
-        }
+
 
         private void button_connexion_Click_Click(object sender, EventArgs e)
         {
@@ -62,6 +59,11 @@ namespace socketUDP
             int nbcarrecu = this.SSockUDP.Receive(messageRecu);
             this.textBox_recp.Text = "nbcarecu " + nbcarrecu + "\n" +
                          Encoding.ASCII.GetString(messageRecu, 0, nbcarrecu);
+        }
+
+        private void button_cls_Click_1(object sender, EventArgs e)
+        {
+            this.textBox_recp.Clear();
         }
     }
 }
