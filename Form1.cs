@@ -37,7 +37,6 @@ namespace socketUDP
             IPEndPoint iped = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 80);
 
             
-
             try
             {
                 this.SSockUDP.Connect(iped);
