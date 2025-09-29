@@ -57,7 +57,7 @@ namespace socketUDP
         private void button_envoyer_Click(object sender, EventArgs e)
         {
             var messageEnvoi = Encoding.ASCII.GetBytes(this.richTextBox_envoi.Text);
-            // this.SSockUDP.Send(messageEnvoi);
+            // this.SSockUDP.Send(messageEnvoi);;
             this.SSockUDP.SendTo(messageEnvoi, this.ipedD);
 
      
