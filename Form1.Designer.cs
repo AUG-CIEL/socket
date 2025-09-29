@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_ip_recp = new System.Windows.Forms.TextBox();
             this.textBox_port_recp = new System.Windows.Forms.TextBox();
@@ -45,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button_cls = new System.Windows.Forms.Button();
             this.textBox_recp = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -200,6 +202,11 @@
             this.textBox_recp.Size = new System.Drawing.Size(198, 112);
             this.textBox_recp.TabIndex = 17;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +255,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button_cls;
         private System.Windows.Forms.TextBox textBox_recp;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

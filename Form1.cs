@@ -25,7 +25,7 @@ namespace socketUDP
         private void button_connexion_Click_Click(object sender, EventArgs e)
         {
             this.SSockUDP = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            this.SSockUDP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 5000); // Définition du socket commit #5
+            this.SSockUDP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 500); // Définition du socket commit #5
 
 
 
@@ -56,24 +56,38 @@ namespace socketUDP
 
         private void button_envoyer_Click(object sender, EventArgs e)
         {
+
             var messageEnvoi = Encoding.ASCII.GetBytes(this.richTextBox_envoi.Text);
             // this.SSockUDP.Send(messageEnvoi);;
             this.SSockUDP.SendTo(messageEnvoi, this.ipedD);
-
+            
      
         }
 
         private void button_recevoir_Click(object sender, EventArgs e)
         {
-            var messageRecu = new byte[1024];
-            int nbcarrecu = this.SSockUDP.Receive(messageRecu);
-            this.textBox_recp.Text = "nbcarecu " + nbcarrecu + "\n" +
-                         Encoding.ASCII.GetString(messageRecu, 0, nbcarrecu);
+            if(SSockUDP != null)
+            {
+                timer1.Start();
+            }
+            
         }
 
         private void button_cls_Click_1(object sender, EventArgs e)
         {
             this.textBox_recp.Clear();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(SSockUDP.Available != 0) // Fonction permet de vérifier si il y'a des donner en réception de la socket. 
+            {
+                var messageRecu = new byte[1024];
+                int nbcarrecu = this.SSockUDP.Receive(messageRecu);
+                this.textBox_recp.Text = "nbcarecu " + nbcarrecu + "\n" +
+                             Encoding.ASCII.GetString(messageRecu, 0, nbcarrecu);
+            }
+
         }
     }
 }
