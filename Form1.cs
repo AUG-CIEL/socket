@@ -25,7 +25,7 @@ namespace socketUDP
         private void button_connexion_Click_Click(object sender, EventArgs e)
         {
             this.SSockUDP = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            this.SSockUDP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 5000);
+            this.SSockUDP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 5000); // Définition du socket commit #5
 
 
 
