@@ -41,7 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button_recevoir = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_envoi = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button_cls = new System.Windows.Forms.Button();
             this.textBox_recp = new System.Windows.Forms.TextBox();
@@ -62,6 +62,7 @@
             this.textBox_ip_recp.Name = "textBox_ip_recp";
             this.textBox_ip_recp.Size = new System.Drawing.Size(69, 20);
             this.textBox_ip_recp.TabIndex = 1;
+            this.textBox_ip_recp.Text = "127.0.0.1";
             // 
             // textBox_port_recp
             // 
@@ -69,6 +70,7 @@
             this.textBox_port_recp.Name = "textBox_port_recp";
             this.textBox_port_recp.Size = new System.Drawing.Size(60, 20);
             this.textBox_port_recp.TabIndex = 2;
+            this.textBox_port_recp.Text = "2023";
             // 
             // label2
             // 
@@ -124,6 +126,7 @@
             this.textBox_dest_ip.Name = "textBox_dest_ip";
             this.textBox_dest_ip.Size = new System.Drawing.Size(70, 20);
             this.textBox_dest_ip.TabIndex = 8;
+            this.textBox_dest_ip.Text = "127.0.0.1";
             // 
             // textBox_dest_port
             // 
@@ -131,6 +134,7 @@
             this.textBox_dest_port.Name = "textBox_dest_port";
             this.textBox_dest_port.Size = new System.Drawing.Size(60, 20);
             this.textBox_dest_port.TabIndex = 9;
+            this.textBox_dest_port.Text = "2022";
             // 
             // label4
             // 
@@ -160,13 +164,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Envoi";
             // 
-            // richTextBox1
+            // richTextBox_envoi
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(53, 121);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(176, 68);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "";
+            this.richTextBox_envoi.Location = new System.Drawing.Point(53, 121);
+            this.richTextBox_envoi.Name = "richTextBox_envoi";
+            this.richTextBox_envoi.Size = new System.Drawing.Size(176, 68);
+            this.richTextBox_envoi.TabIndex = 13;
+            this.richTextBox_envoi.Text = "";
             // 
             // label6
             // 
@@ -204,7 +208,7 @@
             this.Controls.Add(this.textBox_recp);
             this.Controls.Add(this.button_cls);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBox_envoi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button_recevoir);
             this.Controls.Add(this.label4);
@@ -240,7 +244,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button_recevoir;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox_envoi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button_cls;
         private System.Windows.Forms.TextBox textBox_recp;

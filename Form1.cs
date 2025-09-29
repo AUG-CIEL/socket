@@ -20,23 +20,31 @@ namespace socketUDP
         }
 
         private Socket SSockUDP;
-
-
+        private IPEndPoint ipedD;
+        private IPEndPoint ipedR;
         private void button_connexion_Click_Click(object sender, EventArgs e)
         {
-            this.SSockUDP = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            this.SSockUDP = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            this.SSockUDP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 5000);
+
+
 
             //connection sur le serveur 127.0.0.1 port 80 
-            IPEndPoint iped = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 80);
-
+            ipedR = new IPEndPoint(IPAddress.Parse(this.textBox_ip_recp.Text), int.Parse(textBox_port_recp.Text)); // correspond à ip Reception
+             ipedD = new IPEndPoint(IPAddress.Parse(this.textBox_dest_ip.Text), int.Parse(textBox_dest_port.Text));
+            
+            //ipedD = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2022);
+           
+            
 
             try
             {
-                this.SSockUDP.Connect(iped);
+                //this.SSockUDP.Connect(ipedD);
+                this.SSockUDP.Bind(ipedR);
             }
-            catch
+            catch (System.Net.Sockets.SocketException se)
             {
-                MessageBox.Show("Erreur Connexion");
+                MessageBox.Show("Erreur Connexion"+ se.ToString());
             }
         }
 
@@ -48,9 +56,11 @@ namespace socketUDP
 
         private void button_envoyer_Click(object sender, EventArgs e)
         {
-            this.SSockUDP.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 5000);
-            var messageEnvoi = Encoding.ASCII.GetBytes("Get /\r\n\r\n");
-            this.SSockUDP.Send(messageEnvoi);
+            var messageEnvoi = Encoding.ASCII.GetBytes(this.richTextBox_envoi.Text);
+            // this.SSockUDP.Send(messageEnvoi);
+            this.SSockUDP.SendTo(messageEnvoi, this.ipedD);
+
+     
         }
 
         private void button_recevoir_Click(object sender, EventArgs e)
